@@ -1,7 +1,5 @@
 # Datalab Header
 
-![Couverture](../assets/datalab.jpeg)
-
 This extension helps you insert headers into your project files automatically.
 
 ## Features
