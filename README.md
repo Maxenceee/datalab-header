@@ -1,7 +1,5 @@
 # Datalab Header
 
-![Couverture](./assets/datalab.jpeg)
-
 This is the README for your extension "datalab-header".
 
 You will find two version of the extension in this repository:
