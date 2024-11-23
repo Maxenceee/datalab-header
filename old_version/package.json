@@ -2,7 +2,7 @@
 	"name": "datalab-header",
 	"displayName": "Datalab Header",
 	"description": "Header",
-	"version": "0.10.0",
+	"version": "0.11.0",
 	"publisher": "maxencegama",
 	"engines": {
 		"vscode": "^1.86.0"
@@ -57,7 +57,7 @@
 		"lint": "eslint .",
 		"pretest": "npm run lint"
 	},
-	"dependencies": {
-		"@vscode/vsce": "^2.23.0"
+	"devDependencies": {
+		"@vscode/vsce": "^3.2.1"
 	}
 }
