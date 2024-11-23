@@ -1,10 +1,11 @@
 
 const hashes = ['# ', ' #']
 const slashes = ['/* ', ' */']
-const semicolons = [';; ', ' ;;']
 const parens = ['(* ', ' *)']
-const dashes = ['-- ', ' --']
-const percents = ['%% ', ' %%']
+
+// const hashes = ['"""', '"""']
+// const slashes = ['/*', '*/']
+// const parens = ['(*', '*)']
 
 const languageDemiliters = {
 	'c': slashes,
@@ -15,15 +16,11 @@ const languageDemiliters = {
 	'fsharp': parens,
 	'go': slashes,
 	'groovy': slashes,
-	'haskell': dashes,
-	'ini': semicolons,
 	'jade': slashes,
 	'java': slashes,
 	'javascript': slashes,
 	'javascriptreact': slashes,
-	'latex': percents,
 	'less': slashes,
-	'lua': dashes,
 	'makefile': hashes,
 	'objective-c': slashes,
 	'ocaml': parens,

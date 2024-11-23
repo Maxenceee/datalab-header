@@ -1,26 +1,41 @@
 const vscode = require('vscode');
-const { getTemplate, supportsLanguage } = require('./header');
+const { renderHeader, supportsLanguage, extractHeader } = require('./header');
 
 const getCurrentProjectName = () => vscode.workspace.getConfiguration().get('datalab-header.projectName') || "Nom du projet";
 
+const getCurrentStyle = () => vscode.workspace.getConfiguration().get('datalab-header.headerStyle') || "Style nouveau";
+
 const printHeader = () => {
-	var activeTextEditor = vscode.window.activeTextEditor;
+	const { activeTextEditor } = vscode.window;
+	const { document } = activeTextEditor;
 	if (!activeTextEditor) {
 		return;
 	}
-    var document = activeTextEditor.document;
-	console.log('====================================');
-	console.log(document.languageId);
-	console.log('====================================');
 	if (supportsLanguage(document.languageId)) {
-		const textheader = getTemplate(document.languageId, getCurrentProjectName());
-		console.log('====================================');
-		console.log(textheader);
-		console.log('====================================');
-
-		activeTextEditor.edit(function (editor) {
-			editor.insert(new vscode.Position(0, 0), textheader);
+		activeTextEditor.edit(editor => {
+			const currentHeader = extractHeader(document.getText())
+			if (currentHeader) {
+				editor.replace(
+					new vscode.Range(0, 0, 10, 0),
+					renderHeader(
+						getCurrentStyle(),
+						document.languageId,
+						getCurrentProjectName()
+					)
+				);
+			} else {
+				editor.insert(
+					new vscode.Position(0, 0),
+					renderHeader(
+						getCurrentStyle(),
+						document.languageId,
+						getCurrentProjectName()
+					)
+				);
+			}
 		});
+	} else {
+		vscode.window.showInformationMessage(`No header support for language ${document.languageId}`);
 	}
 }
 
@@ -28,10 +43,7 @@ const printHeader = () => {
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
-	const disposable = vscode.commands.registerCommand('mg-header.printheader', printHeader);
-	console.log('====================================');
-	console.log(disposable);
-	console.log('====================================');
+	const disposable = vscode.commands.registerCommand('datalab-header.printheader', printHeader);
 
 	context.subscriptions.push(disposable);
 }

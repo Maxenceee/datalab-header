@@ -28,6 +28,16 @@
 					"default": "Nom du projet",
 					"description": "Nom du projet à inclure dans l'en-tête."
 				}
+				// "datalab-header.headerStyle": {
+				// 	"type": "string",
+				// 	"default": "Style nouveau",
+				// 	"enum": ["Style nouveau", "Style ancien"],
+				// 	"enumDescriptions": [
+				// 		"Style nouveau: Un en-tête rectangulaire entouré d'étoiles",
+				// 		"Style ancien: Un en-tête simple"
+				// 	],
+				// 	"description": "Sélectionnez le style de l'en-tête à insérer."
+				// }
 			}
 		},
 		"commands": [
@@ -48,7 +58,7 @@
 	"menus": {
 		"editor/context": [
 			{
-				"command": "mg-header.printheader",
+				"command": "datalab-header.printheader",
 				"when": "editorTextFocus"
 			}
 		]
