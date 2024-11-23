@@ -2,7 +2,7 @@
 	"name": "datalab-header",
 	"displayName": "Datalab Header",
 	"description": "Insert a header in your code with the project name.",
-	"version": "0.14.0",
+	"version": "0.15.0",
 	"publisher": "maxencegama",
 	"engines": {
 		"vscode": "^1.86.0"
