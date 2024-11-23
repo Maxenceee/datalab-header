@@ -1,11 +1,7 @@
 
-const hashes = ['# ', ' #']
-const slashes = ['/* ', ' */']
-const parens = ['(* ', ' *)']
-
-// const hashes = ['"""', '"""']
-// const slashes = ['/*', '*/']
-// const parens = ['(*', '*)']
+const hashes = ['"""', '"""']
+const slashes = ['/*', '*/']
+const parens = ['(*', '*)']
 
 const languageDemiliters = {
 	'c': slashes,

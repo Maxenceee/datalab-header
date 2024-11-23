@@ -1,6 +1,6 @@
 const { languageDemiliters } = require("./delimiters");
 
-const headerTemplate_1 = `
+const headerTemplate = `
 * ******************************************** *
 *                                              *
 *  $PROJECT_NAME____________________________   *
@@ -11,13 +11,6 @@ const headerTemplate_1 = `
 *                                              *
 * ******************************************** *
 
-`.substring(1);
-
-const headerTemplate_2 = `
-$PROJECT_NAME____________________
-(c) $Y__ L'équipe du DataLab
-Tous droits réservés.
-==================================
 `.substring(1);
 
 const pad = (value, width) => value.concat(' '.repeat(width)).substr(0, width);
@@ -40,14 +33,8 @@ const getTemplate = (style, languageId) => {
 	const [left, right] = languageDemiliters[languageId];
 	const width = left.length;
 
-	// switch (style) {
-	// 	case 'Style ancien':
-	// 		return `${left}\n${headerTemplate_2}\n${right}`;
-	// 	case 'Style nouveau':
-	// 	default:
-			return headerTemplate_1
-				.replace(new RegExp(`^(.{${width}})(.*)(.{${width}})$`, 'gm'), left + '$2' + right);
-	// }
+	return headerTemplate
+		.replace(new RegExp(`^(.{${width}})(.*)(.{${width}})$`, 'gm'), left + '$2' + right);
 }
 
 const renderHeader = (style, languageId, projectName) => [

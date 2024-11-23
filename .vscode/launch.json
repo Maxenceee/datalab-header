@@ -6,21 +6,20 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
-			"name": "Run Extension",
+			"name": "Run Extension - New Version",
 			"type": "extensionHost",
 			"request": "launch",
 			"args": [
-				"--extensionDevelopmentPath=${workspaceFolder}"
+				"--extensionDevelopmentPath=${workspaceFolder}/new_version"
 			]
 		},
 		{
-			"name": "Extension Tests",
+			"name": "Run Extension - Old Version",
 			"type": "extensionHost",
 			"request": "launch",
 			"args": [
-				"--extensionDevelopmentPath=${workspaceFolder}",
-				"--extensionTestsPath=${workspaceFolder}/test/suite/index"
+				"--extensionDevelopmentPath=${workspaceFolder}/old_version"
 			]
-		}
+		},
 	]
 }

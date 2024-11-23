@@ -1,0 +1,63 @@
+{
+	"name": "datalab-header",
+	"displayName": "Datalab Header",
+	"description": "Header",
+	"version": "0.10.0",
+	"publisher": "maxencegama",
+	"engines": {
+		"vscode": "^1.86.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Maxenceee/datalab-header"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:datalab-header.printheader"
+	],
+	"main": "./extension.js",
+	"contributes": {
+		"configuration": {
+			"type": "object",
+			"title": "Datalab Header Settings",
+			"properties": {
+				"datalab-header.projectName": {
+					"type": "string",
+					"default": "Nom du projet",
+					"description": "Nom du projet à inclure dans l'en-tête."
+				}
+			}
+		},
+		"commands": [
+			{
+				"command": "datalab-header.printheader",
+				"title": "Datalab Header: Insert Header"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "datalab-header.printheader",
+				"key": "ctrl+alt+h",
+				"mac": "cmd+alt+h",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"menus": {
+		"editor/context": [
+			{
+				"command": "datalab-header.printheader",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"lint": "eslint .",
+		"pretest": "npm run lint"
+	},
+	"dependencies": {
+		"@vscode/vsce": "^2.23.0"
+	}
+}
