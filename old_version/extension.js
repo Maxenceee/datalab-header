@@ -3,6 +3,8 @@ const { renderHeader, supportsLanguage } = require('./header');
 
 const getCurrentProjectName = () => vscode.workspace.getConfiguration().get('datalab-header.projectName') || "Nom du projet";
 
+const getCurrentProjectAuthor = () => vscode.workspace.getConfiguration().get('datalab-header.author') || "L'équipe du DataLab";
+
 const printHeader = () => {
 	const { activeTextEditor } = vscode.window;
 	const { document } = activeTextEditor;
@@ -15,7 +17,8 @@ const printHeader = () => {
 				new vscode.Position(0, 0),
 				renderHeader(
 					document.languageId,
-					getCurrentProjectName()
+					getCurrentProjectName(),
+					getCurrentProjectAuthor(),
 				)
 			);
 		});

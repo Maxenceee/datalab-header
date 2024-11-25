@@ -2,7 +2,7 @@ const { languageDemiliters } = require("./delimiters");
 
 const headerTemplate = `
 $PROJECT_NAME____________________
-(c) $Y__ L'équipe du DataLab
+(c) $Y__ $SIGNATURE______________
 Tous droits réservés.
 ==================================
 `.substring(1);
@@ -29,8 +29,9 @@ const getTemplate = (languageId) => {
 	return `${left}\n${headerTemplate}\n${right}\n\n`;
 }
 
-const renderHeader = (languageId, projectName) => [
+const renderHeader = (languageId, projectName, projectAuthor) => [
 	{ name: 'PROJECT_NAME', value: projectName },
+	{ name: 'SIGNATURE', value: projectAuthor },
 	{ name: 'Y', value: new Date().getFullYear().toString() },
 ].reduce((header, field) =>
 	setFieldValue(header, field.name, field.value),

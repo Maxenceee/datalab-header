@@ -28,7 +28,8 @@
 				"datalab-header.projectName": {
 					"type": "string",
 					"default": "Nom du projet",
-					"description": "Nom du projet à inclure dans l'en-tête."
+					"description": "Nom du projet à inclure dans l'en-tête.",
+					"scope": "resource"
 				}
 			}
 		},

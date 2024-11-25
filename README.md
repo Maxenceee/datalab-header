@@ -25,4 +25,6 @@ See [extension settings](#extension-settings) to see possible customisation.
 
 ## Extension Settings
 
-You can change the project name displayed in the header by changing the `datalab-header.projectName` value.
+You can change the project name displayed in the header by changing the `datalab-header.projectName` value and the author name by changing the `datalab-header.author` value.
+
+> **💡 :** When setting `projectName` make sure to set only the workspace setting so as not to impact other projects.

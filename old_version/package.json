@@ -2,7 +2,7 @@
 	"name": "datalab-header",
 	"displayName": "Datalab Header",
 	"description": "Insert a header in your code with the project name.",
-	"version": "0.15.0",
+	"version": "0.17.0",
 	"publisher": "maxencegama",
 	"engines": {
 		"vscode": "^1.86.0"
@@ -28,7 +28,14 @@
 				"datalab-header.projectName": {
 					"type": "string",
 					"default": "Nom du projet",
-					"description": "Nom du projet à inclure dans l'en-tête."
+					"description": "Nom du projet à inclure dans l'en-tête.",
+					"scope": "resource"
+				},
+				"datalab-header.author": {
+					"type": "string",
+					"default": "L'équipe du DataLab",
+					"description": "Auteur du project à inclure dans l'en-tête.",
+					"scope": "resource"
 				}
 			}
 		},

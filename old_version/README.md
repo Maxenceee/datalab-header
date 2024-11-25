@@ -9,6 +9,8 @@ Inserts a header into the current file with the following information:
 - Project Name
 - Author
 
+See [extension settings](#extension-settings) to see possible customisation. 
+
 ## Usage
 
 ### Insert a header
@@ -17,4 +19,6 @@ Inserts a header into the current file with the following information:
 
 ## Extension Settings
 
-You can change the project name displayed in the header by changing the `datalab-header.projectName` value.
+You can change the project name displayed in the header by changing the `datalab-header.projectName` value and the author name by changing the `datalab-header.author` value.
+
+> **💡 :** When setting `projectName` make sure to set only the workspace setting so as not to impact other projects.
