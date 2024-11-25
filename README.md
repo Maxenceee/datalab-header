@@ -15,7 +15,7 @@ Inserts a header into the current file with the following information:
 - Project Name
 - Author
 
-See [extension settings](extension-settings) to see possible customisation. 
+See [extension settings](#extension-settings) to see possible customisation. 
 
 ## Usage
 
