@@ -1,6 +1,6 @@
 # Datalab Header
 
-This is the README for your extension "datalab-header".
+This is the README of the extension "datalab-header".
 
 You will find two version of the extension in this repository:
 - The first version is in the `old_version` folder.
@@ -14,6 +14,8 @@ Inserts a header into the current file with the following information:
 - Date
 - Project Name
 - Author
+
+See [extension settings](extension-settings) to see possible customisation. 
 
 ## Usage
 
