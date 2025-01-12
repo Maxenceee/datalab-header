@@ -19,7 +19,7 @@ const setFieldValue = (header, name, value) => {
 	const [, offset, field] = header.match(fieldRegex(name));
 	
 	return header.substr(0, offset.length)
-	.concat(pad(value, field.length))
+	.concat(pad(value, field.length).trim())
 	.concat(header.substr(offset.length + field.length))
 }
 
