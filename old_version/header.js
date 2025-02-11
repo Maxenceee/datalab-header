@@ -7,6 +7,8 @@ Tous droits réservés.
 ==================================
 `.substring(1);
 
+// ^([^\n]+)\n\(c\)([^\n]+)\nTous droits réservés\.\n(=+)$
+
 const pad = (value, width) => value.concat(' '.repeat(width)).substr(0, width);
 
 const fieldRegex = (name) => new RegExp(`^((?:.*\\\n)*.*)(\\\$${name}_*)`, '');
